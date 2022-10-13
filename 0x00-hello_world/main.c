@@ -1,6 +1,10 @@
 #include <stdio.h>
 
-int main()
+/**
+ * main - main function
+ * Return: Always 0 (Success}
+ */
+int main(void)
 {
 	
 	return 0;
