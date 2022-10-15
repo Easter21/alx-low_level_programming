@@ -5,7 +5,7 @@
 /**
  * main - trying if, else and variable
  *
- * Return : value of main function is 0
+ * Return : Awlays 0 (Success)
  */
 int main(void)
 {
@@ -15,15 +15,15 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	if (n > 0)
 	{
-		printf("n is positive number");
-	}
-	else if (n < 0)
-	{
-		printf("n is negative nember");
+		printf("n is positive\n");
 	}
 	else if (n == 0)
 	{
 		printf("n is zero");
+	}
+	else if (n < 0)
+	{
+		printf("n is negative");
 	}
 	return (0);
 }
