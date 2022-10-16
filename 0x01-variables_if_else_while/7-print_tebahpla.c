@@ -9,7 +9,7 @@ int main(void)
 {
 	char chlower = 'z';
 
-	for (chlower ; chlower >= 'a' ; chlower--)
+	for (; chlower >= 'a' ; chlower--)
 	{
 		putchar(chlower);
 	}
