@@ -10,9 +10,10 @@ int main(void)
 {
 	int num = 0;
 
-	for (num ; num < 10 ; num++)
+	while (num < 10)
 	{
 		printf("%i", num);
+		num++;
 	}
 	putchar('\n');
 }
