@@ -14,4 +14,5 @@ int main(void)
 		putchar(chlower);
 	}
 	putchar('\n');
+	return (0);
 }
