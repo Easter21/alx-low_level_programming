@@ -2,47 +2,40 @@
 
 /**
  *main - print the nember range from 0 to 99 and two numbers separated by space
- *
- *Return: Alaways 0 (Success)
+ *Return: Always 0 (Success)
  */
 
 int main(void)
 {
-	int oneth = '0';
-	int tenth = '0';
+	int oneth;
+	int tenth;
 	int oneth2;
 	int tenth2;
 
-	while (tenth <= '9')
+	for (tenth = '0'; tenth <= '9'; tenth++)
 	{
-		tenth2 = tenth;
-		while (oneth <= '9')
+		for (oneth = '0'; oneth <= '9'; oneth++)
 		{
-			oneth2 = oneth + 1;
-			while (tenth2 <= '9')
+			for (tenth2 = tenth; tenth2 <= '9'; tenth2++)
 			{
-				/* tenth2 = tenth; */
-				while (oneth2 <= '9')
+				for (oneth2 = oneth + 1; oneth2 <= '9'; oneth2++)
 				{
-					/* oneth2 = oneth + 1; */
 					putchar(tenth);
 					putchar(oneth);
 					putchar(' ');
 					putchar(tenth2);
 					putchar(oneth2);
-					if (!((tenth == '9' && oneth == '8') && (tenth2 == '9' && oneth2 == '9')))
+
+					if (!((tenth == '9' && oneth == '8') &&
+					      (tenth2 == '9' && oneth2 == '9')))
 					{
 						putchar(',');
 						putchar(' ');
 					}
-					oneth2++;
 				}
-				tenth2++;
 				oneth2 = '0';
 			}
-			oneth++;
 		}
-		tenth++;
 	}
 	putchar('\n');
 
