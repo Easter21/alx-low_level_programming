@@ -14,6 +14,7 @@ void print_alphabet_x10(void)
 	while (counter <= 10)
 	{
 		char lowerch = 'a';
+
 		while (lowerch <= 'z')
 		{
 			_putchar(lowerch);
