@@ -8,23 +8,27 @@
 int main(void)
 {
 
-	int count = 1;
+	int count = 3;
 	long fi = 1, sec2nd = 2;
-	/* int next = fi + sec2nd;*/
+	long next = fi + sec2nd;
+
+	printf("%lu, ", fi);
+	printf("%lu, ", sec2nd);
+
 
 	while (count <= 50)
 	{
 		if (count == 50)
 		{
-			printf("%li, %li", fi, sec2nd);
+			printf("%lu ", next);
 		}
 		else
 		{
-			printf("%li, %li", fi, sec2nd);
+			printf("%lu, ", next);
 		}
-		/* fi = sec2nd;*/
-		sec2nd = fi + sec2nd;
-		fi = fi + sec2nd;
+		fi = sec2nd;
+		sec2nd = next;
+		next = fi + sec2nd;
 		count++;
 		/*printf("\n"); */
 	}
