@@ -16,15 +16,15 @@ int main(void)
 	{
 		if (count == 50)
 		{
-			printf("%i", next);
+			printf("%i %i", fi, sec2nd);
 		}
 		else
 		{
-			printf("%i , ", next);
+			printf("%i %i, ", fi, sec2nd);
 		}
-		fi = sec2nd;
-		sec2nd = next;
-		next = fi + sec2nd;
+		/* fi = sec2nd;*/
+		sec2nd = fi + sec2nd;
+		fi = fi + sec2nd;
 		count++;
 		/*printf("\n"); */
 	}
