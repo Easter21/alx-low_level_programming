@@ -9,18 +9,18 @@ int main(void)
 {
 
 	int count = 1;
-	int fi = 1, sec2nd = 2;
+	long fi = 1, sec2nd = 2;
 	/* int next = fi + sec2nd;*/
 
 	while (count <= 50)
 	{
 		if (count == 50)
 		{
-			printf("%i %i", fi, sec2nd);
+			printf("%li, %li", fi, sec2nd);
 		}
 		else
 		{
-			printf("%i %i, ", fi, sec2nd);
+			printf("%li, %li", fi, sec2nd);
 		}
 		/* fi = sec2nd;*/
 		sec2nd = fi + sec2nd;
