@@ -4,12 +4,9 @@
  *@n: parameter
  *Return: void
  */
-
 void print_times_table(int n)
 {
-	int row = 0;
-	int cols;
-	int mul;
+	int row = 0, cols, mul;
 
 	if (n >= 0 && n <= 15)
 	{
@@ -23,8 +20,7 @@ void print_times_table(int n)
 					_putchar('0' + mul);
 				else
 				{
-					_putchar(',');
-					_putchar(' ');
+					_putchar(','), _putchar(' ');
 					if (mul <= 9)
 					{
 						_putchar(' ');
@@ -43,7 +39,6 @@ void print_times_table(int n)
 						_putchar('0' + ((mul / 10) % 10));
 						_putchar('0' + (mul % 10));
 					}
-					/* cols++;*/
 				}
 				cols++;
 			}
