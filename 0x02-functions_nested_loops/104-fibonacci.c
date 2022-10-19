@@ -11,7 +11,7 @@ int main(void)
 	long int t0 = 0, t1 = 1, s;
 	int i;
 
-	for (i = 1; i <= 98; i++)
+	for (i = 3 ; i <= 98; i++)
 	{
 		s = t0 + t1;
 		if (i == 98)
@@ -24,6 +24,7 @@ int main(void)
 		}
 		t0 = t1;
 		t1 = s;
+		/* s = t0 + t1;*/
 	}
 	printf("\n");
 	return (0);
