@@ -10,7 +10,7 @@ int main(void)
 
 	int count = 1;
 	int fi = 1, sec2nd = 2;
-	int next = fi + sec2nd;
+	/* int next = fi + sec2nd;*/
 
 	while (count <= 50)
 	{
