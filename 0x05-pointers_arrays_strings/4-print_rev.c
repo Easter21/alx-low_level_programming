@@ -1,26 +1,6 @@
 #include "main.h"
 
 /**
- *_strlen - return the length of string
- *@s: string as parameter
- *Return: length of string
- */
-
-int _strlen(char *s)
-{
-	int length = 0;
-
-	while (*s != '\0')
-	{
-		length++;
-		s++;
-	}
-
-	return (length);
-}
-
-
-/**
  *print_rev - print string in reverse
  *@s: string pointer s
  *Return: void
@@ -28,16 +8,26 @@ int _strlen(char *s)
 
 void print_rev(char *s)
 {
-	int i, l;
-	char temp;
 
-	l = _strlen(s) - 1;
+	int length = 0;
+	int i;
 
-	for (i = 0 ; i < l ; i++)
+	/* iterate to find length of string and point to last character */
+	while (*s != '\0')
 	{
-		temp = s[i];
-		s[i] = s[l];
-		s[l] = temp;
-		l--;
+		length++;
+		++s;
 	}
+
+	/* go back to character before null character */
+	s--;
+
+	/* print string reversed */
+	for (i = length; i > 0; i--)
+	{
+		_putchar(*s);
+		s--;
+	}
+
+	_putchar('\n');
 }
