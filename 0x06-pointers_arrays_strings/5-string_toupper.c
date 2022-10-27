@@ -2,7 +2,7 @@
 
 /**
  **string_toupper - change all lowercase letters to uppercase
- *@*: character parameter
+ *@s: character parameter
  *Return: uppecase letter
  */
 
