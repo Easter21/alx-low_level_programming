@@ -21,6 +21,7 @@ void print_diagsums(int *a, int size)
 		rws++;
 	}
 
+	rws = 1;
 	while (rws <= size)
 	{
 		k = (rws * size) - rws;
