@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
 /**
  *main - multiples od the two numbers
  *@argc: counter argument
