@@ -17,9 +17,9 @@ int main(int argc, char *argv[])
 		printf("Errot\n");
 		return (1);
 	}
-	int mul = atoi(argv[1]) * atoi(argv[2]);
+	/* int mul = atoi(argv[1]) * atoi(argv[2]); */
 
-	printf("%i\n", mul);
+	printf("%i\n", atoi(argv[1]) * atoi(argv[2]));
 
 
 	return (0);
