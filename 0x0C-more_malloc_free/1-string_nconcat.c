@@ -40,7 +40,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = "";
 	if (num < 0) /* negative n byte size not acceptable */
 		return (NULL);
-	num = _strlen(s2);
+	if (num >= _strlen(s2))
+		num = _strlen(s2);
 	len = _strlen(s1) + num + 1; /* sring length including null pointer */
 
 	ptr = malloc(sizeof(*ptr) * len); /** calling malloc function */
