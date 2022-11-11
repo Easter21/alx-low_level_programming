@@ -1,68 +1,49 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-
 /**
- * _strlen - returns the length of a string
- * @s: string
- * Return: length
+ * string_nconcat - len of 1st str, len of 2nd str, if n < 2nd, 2nd = n
+ * 2nd + 1st = total len, malloc + null byte, loop to insert into temp arr
+ * @s1: input one
+ * @s2: input two
+ * @n: s2's number of bytes
+ * Return: 0
  */
-int _strlen(char *s)
-{
-	int len = 0;
-
-	while (*s != '\0')
-	{
-		len++;
-		s++;
-	}
-
-	return (len);
-}
-
-
-/**
- **string_nconcat - concatenates two strings
- *@s1: parameter string 1
- *@s2: parameter string 2
- *@n: n byte to concat from string 2
- *Return: concatenated string
- */
-
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *ptr;
-	int num, len;/* i, j;*/
+	char *arr;
+	unsigned int i, j, co, co_2;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-	if (num < 0) /* negative n byte size not acceptable */
-		return (NULL);
-	if (num >= _strlen(s1))
-		num = _strlen(s1);
-	len = _strlen(s2) + num + 1; /* sring length including null pointer */
 
-	ptr = malloc(sizeof(*ptr) * len); /** calling malloc function */
-
-	if (ptr == NULL)
-		return (NULL);
-
-		/* concat string */
-	while (*s2 != '\0')
+	for (i = 0; s1[i] != '\0'; i++)
 	{
-		/*ptr[i] = s2[i];*/
-		s2++;
 	}
 
-	while (*s1 != '\0' && num--)
+	for (j = 0; s2[j] != '\0'; j++)
 	{
-		*ptr = *s1 = *s2;
-		s1++;
-		s2++;
 	}
-	*ptr = '\0';
 
-	return (ptr);
+	if (n < j)
+		j = n;
+
+	j += i;
+	arr = malloc(sizeof(char *) * (j + 1));
+
+	if (arr == NULL)
+		return (NULL);
+
+	for (co = 0; co < i; co++)
+		arr[co] = s1[co];
+	for (co_2 = 0; co < j; co_2++)
+	{
+		arr[co] = s2[co_2];
+		co++;
+	}
+	co++;
+	arr[co] = '\0';
+	return (arr);
 }
