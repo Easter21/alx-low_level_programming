@@ -32,7 +32,7 @@ int _strlen(char *s)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ptr;
-	int num, len, i, j;
+	int num, len;/* i, j;*/
 
 	if (s1 == NULL)
 		s1 = "";
@@ -40,31 +40,29 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = "";
 	if (num < 0) /* negative n byte size not acceptable */
 		return (NULL);
-	if (num >= _strlen(s2))
-		num = _strlen(s2);
-	len = _strlen(s1) + num + 1; /* sring length including null pointer */
+	if (num >= _strlen(s1))
+		num = _strlen(s1);
+	len = _strlen(s2) + num + 1; /* sring length including null pointer */
 
 	ptr = malloc(sizeof(*ptr) * len); /** calling malloc function */
 
 	if (ptr == NULL)
 		return (NULL);
 
-	i = 0;
-	/* concat string */
-	while (s1[i] != '\0')
+		/* concat string */
+	while (*s2 != '\0')
 	{
-		ptr[i] = s1[i];
-		i++;
+		/*ptr[i] = s2[i];*/
+		s2++;
 	}
-	j = 0;
-	while (j < num)
+
+	while (*s1 != '\0' && num--)
 	{
-		ptr[i + j] = s2[j];
-		j++;
+		*ptr = *s1 = *s2;
+		s1++;
+		s2++;
 	}
-	ptr[i + j] = '\0';
+	*ptr = '\0';
 
 	return (ptr);
 }
-
-
